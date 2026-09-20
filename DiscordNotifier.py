@@ -33,17 +33,17 @@ class DiscordWebhookClient:
 
     def send_notification(self, account, reward) -> None:
         embed = self.base_embed(
-            title=f"{reward.get_game_name()} Daily Check-In",
-            icon_url=reward.get_icon(),
+            title=f"{reward.game_name} Daily Check-In",
+            icon_url=reward.icon,
         )
 
-        embed.add_embed_field(name="UID", value=account.get_game_uid())
-        embed.add_embed_field(name="Level", value=str(account.get_level()))
-        embed.add_embed_field(name="Name", value=account.get_nickname())
-        embed.add_embed_field(name="Server", value=account.get_region_name())
+        embed.add_embed_field(name="UID", value=account.game_uid)
+        embed.add_embed_field(name="Level", value=str(account.level))
+        embed.add_embed_field(name="Name", value=account.nickname)
+        embed.add_embed_field(name="Server", value=account.region_name)
         embed.add_embed_field(
             name="Reward",
-            value=f"{reward.get_name()} x {reward.get_cnt()}",
+            value=f"{reward.name} x {reward.cnt}",
         )
 
         self._send(embed)

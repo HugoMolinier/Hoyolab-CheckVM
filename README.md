@@ -1,7 +1,7 @@
 ## Hoyolab Auto Check-in
 
 This Python script automates the daily check-in process for Hoyolab, allowing you to claim rewards for Genshin Impact, Honkai: Star Rail and Zenless Zone Zero without manually visiting the website. It also supports sending notifications to Discord using webhooks.
-
+a
 ### Features
 
 * **Automated Check-in:** Automatically checks in for supported games and claims daily rewards.
